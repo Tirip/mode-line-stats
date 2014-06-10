@@ -42,7 +42,9 @@
 (defvar mls-sensors-command "sensors")
 (defvar mls-sensors-patterns
   '(("c0" "Core 0")
-    ("c1" "Core 1"))
+    ("c1" "Core 1")
+    ("c2" "Core 2")
+    ("c3" "Core 3"))
   "Alist of patterns.
 First value is the formatter.
 Second value is the `sensors` label.")

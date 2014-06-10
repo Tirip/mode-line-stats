@@ -55,7 +55,7 @@
 (defvar mls-cpu-settings
   '((:formats
      ((:primary "&A{c}")
-      (:secondary " CPU[%C0{%%},%C1{%%}]")
+      (:secondary " CPU[%C0{%%},%C1{%%},%C2{%%},%C3{%%}]")
       (:monitor "&A")))
     (:levels
      (("%A" ((90.0 "crit")
@@ -65,6 +65,12 @@
               (50.0 "warn")
               (0.0  "norm")))
       ("%C1" ((90.0 "crit")
+              (50.0 "warn")
+              (0.0  "norm")))
+      ("%C2" ((90.0 "crit")
+              (50.0 "warn")
+              (0.0  "norm")))
+      ("%C3" ((90.0 "crit")
               (50.0 "warn")
               (0.0  "norm"))))))
   "CPU stats settings.")
@@ -78,7 +84,7 @@
   :type 'number
   :group 'mls-cpu)
 
-(defcustom mls-cpu-format "%A %C0 %C1"
+(defcustom mls-cpu-format "%A %C0 %C1 %C2 %C3"
   "Format string:
 %A - average CPU usage in percent.
 %C# - CPU usage of #th core in percent.
